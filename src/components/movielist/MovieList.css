@@ -1,0 +1,13 @@
+.scroll {
+display: flex;
+flex-wrap: wrap;
+padding-top: 30px;
+justify-content: center;
+}
+.movieh1{
+    margin:  3.5rem;
+    font-size: 3rem;
+}
+.carddiv{
+    margin: 10px;
+}

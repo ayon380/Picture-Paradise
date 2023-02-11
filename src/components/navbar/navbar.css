@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #000000;
+}
+
+.container {
+  /* max-width: 1900px; */
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar {
+  /* position: fixed; */
+  top:0px;
+  height:4rem;
+  background-color: #000000;
+  color: white;
+  position: relative;
+}
+
+.logo {
+  color: rgb(255, 255, 255);
+  font-family: funky;
+  font-size: 3rem !important;
+  color: gold;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.nav-elements ul {
+  display: flex;
+  justify-content:flex-start;
+  list-style-type: none;
+}
+
+.nav-elements ul li:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav-elements ul a {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #ffffff;
+  text-decoration: none;
+}
+.nav-elements ul a:hover{
+  color: #ffe06e;
+}
+.nav-elements ul a.active {
+  /* color: #ffffff; */
+  font-weight: 500;
+  position: relative;
+  color: gold;
+}
+
+.nav-elements ul a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: gold;
+}
+
+@media (max-width: 768px) {
+  .nav-elements ul li:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-elements {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background-color: #fef7e5;
+    width: 0px;
+    height: calc(100vh - 60px);
+    transition: all 0.3s ease-in;
+    overflow: hidden;
+  }
+
+  .nav-elements.active {
+    width: 270px;
+  }
+
+  .nav-elements ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-elements ul li {
+    margin-right: unset;
+    margin-top: 22px;
+  }
+}
+.navbar input[type=text]{
+  border-radius: 18px 0 0 18px;
+
+}
+.navbar input[type=text]:focus{
+  outline: none;
+  border: 2px solid #f5c518;
+}
+i{
+  padding-left: 5rem;
+  padding-top: 0.2rem;
+}

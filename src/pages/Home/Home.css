@@ -1,0 +1,66 @@
+Link {
+    text-decoration: none;
+    color: white;
+}
+
+.poster {
+    color: white;
+    height: 50rem;
+}
+
+.posterdestit {
+    text-decoration: none;
+}
+
+.posterimg {
+    margin: auto;
+    display: block;
+    width: 100%;
+    height:auto !important;
+}
+
+.posterDes {
+    position: absolute;
+    padding: 5rem;
+    bottom: 0px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: flex-start;
+    background-image: linear-gradient(to bottom left,rgb(0, 0, 0, 0), rgb(0, 0, 0, 1));
+    opacity: 1;
+    /* transition: opacity .3s; */
+}
+
+.posterDes:hover {
+    opacity: 1;
+}
+
+.posterdesOverView {
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+    display: flex;
+    text-align: left;
+    width: 50%;
+}
+
+.posterdestit {
+    font-weight: 900;
+    font-size:6rem;
+    margin-bottom: 0.8rem;
+    text-align: left;
+}
+.posterdesRating{
+    margin-left: 3rem;
+}
+.posterdesRelDate{
+    font-size: 1.4rem;
+}
+i{
+    padding-left: 0px;
+    color:gold;
+}
