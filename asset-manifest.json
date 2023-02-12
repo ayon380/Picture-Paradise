@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Picture-Paradise/static/css/main.33952695.css",
+    "main.js": "/Picture-Paradise/static/js/main.5122f467.js",
+    "static/js/787.14e4bc02.chunk.js": "/Picture-Paradise/static/js/787.14e4bc02.chunk.js",
+    "static/media/funky.otf": "/Picture-Paradise/static/media/funky.119a115e9ae6bfdee92e.otf",
+    "static/media/Product Sans Italic.ttf": "/Picture-Paradise/static/media/Product Sans Italic.9f3855791ace888bfd09.ttf",
+    "static/media/Product Sans Bold Italic.ttf": "/Picture-Paradise/static/media/Product Sans Bold Italic.014fb88cf36e7fc14acb.ttf",
+    "static/media/Product Sans Bold.ttf": "/Picture-Paradise/static/media/Product Sans Bold.53df38d5491afbeb42a5.ttf",
+    "static/media/Product Sans Regular.ttf": "/Picture-Paradise/static/media/Product Sans Regular.d165384076551a756b3c.ttf",
+    "index.html": "/Picture-Paradise/index.html",
+    "main.33952695.css.map": "/Picture-Paradise/static/css/main.33952695.css.map",
+    "main.5122f467.js.map": "/Picture-Paradise/static/js/main.5122f467.js.map",
+    "787.14e4bc02.chunk.js.map": "/Picture-Paradise/static/js/787.14e4bc02.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.33952695.css",
+    "static/js/main.5122f467.js"
+  ]
+}
