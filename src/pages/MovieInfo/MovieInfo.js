@@ -3,12 +3,12 @@ import "./MovieInfo.css"
 import { useParams } from "react-router-dom"
 
 const Movieinfo = () => {
-    const [currentMovieDetail, setMovie] = useState()
+    const [movie, setMovie] = useState()
     const { id } = useParams()
 
     useEffect(() => {
         getData()
-        window.scrollTo(0,0)
+
     }, [])
 
     const getData = () => {
@@ -19,63 +19,62 @@ const Movieinfo = () => {
 
     return (
         <div className="movie">
-            <div className="movie__intro">
-                <img className="movie__backdrop" src={`https://image.tmdb.org/t/p/original${currentMovieDetail ? currentMovieDetail.backdrop_path : ""}`} />
+            <div className="movieposter">
+                <img className="movieposterimg" alt="" src={`https://image.tmdb.org/t/p/original${movie ? movie.backdrop_path : ""}`} />
             </div>
-            <div className="movie__detail">
-                <div className="movie__detailLeft">
-                    <div className="movie__posterBox">
-                        <img className="movie__poster" src={`https://image.tmdb.org/t/p/original${currentMovieDetail ? currentMovieDetail.poster_path : ""}`} />
+            <div className="movieinfo">
+                <div className="movieinfoLeft">
+                    <div className="movieposter1">
+                        <img className="movieposter1img" alt=" " src={`https://image.tmdb.org/t/p/original${movie ? movie.poster_path : ""}`} />
                     </div>
                 </div>
-                <div className="movie__detailRight">
-                    <div className="movie__detailRightTop">
-                        <div className="movie__name">{currentMovieDetail ? currentMovieDetail.original_title : ""}</div>
-                        <div className="movie__tagline">{currentMovieDetail ? currentMovieDetail.tagline : ""}</div>
-                        <div className="movie__rating">
-                            {currentMovieDetail ? currentMovieDetail.vote_average: ""} <i class="fas fa-star" />
-                            <span className="movie__voteCount">{currentMovieDetail ? "(" + currentMovieDetail.vote_count + ") votes" : ""}</span>
-                        </div>  
-                        <div className="movie__runtime">{currentMovieDetail ? currentMovieDetail.runtime + " mins" : ""}</div>
-                        <div className="movie__releaseDate">{currentMovieDetail ? "Release date: " + currentMovieDetail.release_date : ""}</div>
-                        <div className="movie__genres">
+                <div className="movieinfoRight">
+                    <div className="movieinfoRightTop">
+                        <div className="moviename">{movie ? movie.original_title : ""}</div>
+                        <div className="movietagline">{movie ? movie.tagline : ""}</div>
+                        <div className="movierating">
+                            {movie ? movie.vote_average: ""} <i class="fas fa-star" />
+                            <span className="movievoteCount">{movie ? "(" + movie.vote_count + ") votes" : ""}</span>
+                        </div> 
+                        <div className="movieruntime">{movie ? movie.runtime + " mins" : ""}</div>
+                        <div className="moviereleaseDate">{movie ? "Release date: " + movie.release_date : ""}</div>
+                        <div className="moviegenres">
                             {
-                                currentMovieDetail && currentMovieDetail.genres
+                                movie && movie.genres
                                 ? 
-                                currentMovieDetail.genres.map(genre => (
-                                    <><span className="movie__genre" id={genre.id}>{genre.name}</span></>
+                                movie.genres.map(genre => (
+                                    <><span className="moviegenre" id={genre.id}>{genre.name}</span></>
                                 )) 
                                 : 
                                 ""
                             }
                         </div>
                     </div>
-                    <div className="movie__detailRightBottom">
+                    <div className="movieinfoRightBottom">
                         <div className="synopsisText">Synopsis</div>
-                        <div>{currentMovieDetail ? currentMovieDetail.overview : ""}</div>
+                        <div className="synopsisp">{movie ? movie.overview : ""}</div>
                     </div>
                     
                 </div>
             </div>
-            <div className="movie__links">
-                <div className="movie__heading">Useful Links</div>
+            <div className="movielinks">
                 {
-                    currentMovieDetail && currentMovieDetail.homepage && <a href={currentMovieDetail.homepage} target="_blank" style={{textDecoration: "none"}}><p><span className="movie__homeButton movie__Button">Homepage <i className="newTab fas fa-external-link-alt"></i></span></p></a>
+                    movie && movie.homepage && <a href={movie.homepage} target="_blank" rel="noreferrer" style={{textDecoration: "none"}}><p><span className="homepagebtn">Homepage <i className="newTab fas fa-external-link-alt" id="homepagelink"></i></span></p></a>
                 }
                 {
-                    currentMovieDetail && currentMovieDetail.imdb_id && <a href={"https://www.imdb.com/title/" + currentMovieDetail.imdb_id} target="_blank" style={{textDecoration: "none"}}><p><span className="movie__imdbButton movie__Button">IMDb<i className="newTab fas fa-external-link-alt"></i></span></p></a>
+                    movie && movie.imdb_id && <a href={"https://www.imdb.com/title/" + movie.imdb_id} target="_blank" rel="noreferrer" style={{textDecoration: "none"}}><p><span className="imdbpagebtn">IMDb<i className="newTab fas fa-external-link-alt" id="imdbpagelink"></i></span></p></a>
                 }
             </div>
-            <div className="movie__heading">Production companies</div>
-            <div className="movie__production">
+            <div className="movieheading">Production companies</div>
+            <div className="movieprc">
                 {
-                    currentMovieDetail && currentMovieDetail.production_companies && currentMovieDetail.production_companies.map(company => (
+                    movie && movie.production_companies && movie.production_companies.map(company => (
                         <>
                             {
                                 company.logo_path 
                                 && 
-                                <span className="productionCompanyImage">
-                                    <img className="movie__productionComapany" src={"https://image.tmdb.org/t/p/original" + company.logo_path} />
+                                <span className="prcimg">
+                                    <img className="mprcomp" alt="dfsf" src={"https://image.tmdb.org/t/p/original" + company.logo_path} />
                                     <span>{company.name}</span>
                                 </span>
                             }

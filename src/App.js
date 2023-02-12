@@ -16,6 +16,7 @@ function App() {
           <Route path="/search" element={<Search/>}/>
           <Route path="/now_playing" element={<Home tag="now_playing" key="now_playing"/>} />
           <Route path="/toprated" element={<Home tag="top_rated" key="top_rated"/>} />
+          <Route path="/Picture-Paradise" element={<Home tag="popular" key="popular"/>} />
           <Route path="/*" element={<h1>404</h1>} />
         </Routes>
       </Router>

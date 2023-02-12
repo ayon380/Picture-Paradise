@@ -1,7 +1,6 @@
 import React from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Card from "../Card/Card";
-import Loading from "./Loading";
 import "./MovieList.css";
 class App extends React.Component {
   constructor() {
